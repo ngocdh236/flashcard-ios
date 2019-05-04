@@ -15,8 +15,12 @@
 		FA5A3884227DC0300073311A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA5A3882227DC0300073311A /* LaunchScreen.storyboard */; };
 		FA5A388F227DC0300073311A /* FlashcardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5A388E227DC0300073311A /* FlashcardTests.swift */; };
 		FA5A389A227DC0300073311A /* FlashcardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5A3899227DC0300073311A /* FlashcardUITests.swift */; };
-		FA5A38BB227DC98C0073311A /* DecksCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5A38B9227DC98C0073311A /* DecksCollectionViewController.swift */; };
-		FA5A38BC227DC98C0073311A /* DecksCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA5A38BA227DC98C0073311A /* DecksCollectionViewController.xib */; };
+		FA5A38BB227DC98C0073311A /* DecksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5A38B9227DC98C0073311A /* DecksViewController.swift */; };
+		FA5A38BC227DC98C0073311A /* DecksViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA5A38BA227DC98C0073311A /* DecksViewController.xib */; };
+		FA954AD5227DD3400084C68E /* DecksCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA954AD3227DD3400084C68E /* DecksCollectionViewCell.swift */; };
+		FA954AD6227DD3400084C68E /* DecksCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA954AD4227DD3400084C68E /* DecksCollectionViewCell.xib */; };
+		FA954AD9227DEB0C0084C68E /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA954AD8227DEB0C0084C68E /* Deck.swift */; };
+		FA954ADB227DEB660084C68E /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA954ADA227DEB660084C68E /* Card.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,8 +61,12 @@
 		FA5A3895227DC0300073311A /* FlashcardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlashcardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA5A3899227DC0300073311A /* FlashcardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardUITests.swift; sourceTree = "<group>"; };
 		FA5A389B227DC0300073311A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FA5A38B9227DC98C0073311A /* DecksCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecksCollectionViewController.swift; sourceTree = "<group>"; };
-		FA5A38BA227DC98C0073311A /* DecksCollectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DecksCollectionViewController.xib; sourceTree = "<group>"; };
+		FA5A38B9227DC98C0073311A /* DecksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecksViewController.swift; sourceTree = "<group>"; };
+		FA5A38BA227DC98C0073311A /* DecksViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DecksViewController.xib; sourceTree = "<group>"; };
+		FA954AD3227DD3400084C68E /* DecksCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecksCollectionViewCell.swift; sourceTree = "<group>"; };
+		FA954AD4227DD3400084C68E /* DecksCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DecksCollectionViewCell.xib; sourceTree = "<group>"; };
+		FA954AD8227DEB0C0084C68E /* Deck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
+		FA954ADA227DEB660084C68E /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +145,7 @@
 		FA5A3878227DC0300073311A /* Flashcard */ = {
 			isa = PBXGroup;
 			children = (
+				FA954AD7227DEAFF0084C68E /* Models */,
 				FA5A38B7227DC97A0073311A /* Screens */,
 				FA5A3879227DC0300073311A /* AppDelegate.swift */,
 				FA5A3880227DC0300073311A /* Assets.xcassets */,
@@ -175,10 +184,21 @@
 		FA5A38B8227DC97D0073311A /* Decks */ = {
 			isa = PBXGroup;
 			children = (
-				FA5A38B9227DC98C0073311A /* DecksCollectionViewController.swift */,
-				FA5A38BA227DC98C0073311A /* DecksCollectionViewController.xib */,
+				FA5A38B9227DC98C0073311A /* DecksViewController.swift */,
+				FA5A38BA227DC98C0073311A /* DecksViewController.xib */,
+				FA954AD3227DD3400084C68E /* DecksCollectionViewCell.swift */,
+				FA954AD4227DD3400084C68E /* DecksCollectionViewCell.xib */,
 			);
 			path = Decks;
+			sourceTree = "<group>";
+		};
+		FA954AD7227DEAFF0084C68E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FA954AD8227DEB0C0084C68E /* Deck.swift */,
+				FA954ADA227DEB660084C68E /* Card.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,7 +312,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA5A3884227DC0300073311A /* LaunchScreen.storyboard in Resources */,
-				FA5A38BC227DC98C0073311A /* DecksCollectionViewController.xib in Resources */,
+				FA954AD6227DD3400084C68E /* DecksCollectionViewCell.xib in Resources */,
+				FA5A38BC227DC98C0073311A /* DecksViewController.xib in Resources */,
 				FA5A3881227DC0300073311A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -459,8 +480,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA954AD9227DEB0C0084C68E /* Deck.swift in Sources */,
 				FA5A387A227DC0300073311A /* AppDelegate.swift in Sources */,
-				FA5A38BB227DC98C0073311A /* DecksCollectionViewController.swift in Sources */,
+				FA954ADB227DEB660084C68E /* Card.swift in Sources */,
+				FA954AD5227DD3400084C68E /* DecksCollectionViewCell.swift in Sources */,
+				FA5A38BB227DC98C0073311A /* DecksViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

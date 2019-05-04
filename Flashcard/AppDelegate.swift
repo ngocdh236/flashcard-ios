@@ -17,9 +17,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow.init(frame: UIScreen.main.bounds)
         
-        let decksCollectionViewController = DecksCollectionViewController()
+        let decksViewController = DecksViewController()
         
-        window!.rootViewController = decksCollectionViewController
+        let decksNavigationController = UINavigationController(rootViewController: decksViewController)
+        
+        window!.rootViewController = decksNavigationController
         
         window!.makeKeyAndVisible()
         
