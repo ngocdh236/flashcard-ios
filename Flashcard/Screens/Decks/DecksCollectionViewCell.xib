@@ -13,14 +13,26 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="decksCollectionViewCell" id="gTV-IL-0wX" customClass="DecksCollectionViewCell" customModule="Flashcard" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="348" height="91"/>
+            <rect key="frame" x="0.0" y="0.0" width="348" height="200"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="348" height="91"/>
+                <rect key="frame" x="0.0" y="0.0" width="348" height="200"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="etU-at-wzO">
-                        <rect key="frame" x="153" y="35" width="42" height="21"/>
+                        <rect key="frame" x="153" y="80" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vz9-VE-ijL">
+                        <rect key="frame" x="20" y="159" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cards" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wkA-Pr-f2P">
+                        <rect key="frame" x="67" y="159" width="46" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -28,15 +40,20 @@
                 </subviews>
             </view>
             <constraints>
+                <constraint firstItem="Vz9-VE-ijL" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="Rka-AP-dt7"/>
                 <constraint firstItem="etU-at-wzO" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="Tah-f9-86L"/>
-                <constraint firstItem="etU-at-wzO" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="Uol-ez-KZr"/>
+                <constraint firstAttribute="bottom" secondItem="wkA-Pr-f2P" secondAttribute="bottom" constant="20" id="YO8-pZ-Juf"/>
+                <constraint firstItem="etU-at-wzO" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="80" id="Yzf-QG-yOe"/>
+                <constraint firstItem="wkA-Pr-f2P" firstAttribute="leading" secondItem="Vz9-VE-ijL" secondAttribute="trailing" constant="5" id="jqe-Jt-21T"/>
+                <constraint firstAttribute="bottom" secondItem="Vz9-VE-ijL" secondAttribute="bottom" constant="20" id="uRV-aa-jwZ"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <size key="customSize" width="348" height="91"/>
+            <size key="customSize" width="348" height="200"/>
             <connections>
                 <outlet property="nameLabel" destination="etU-at-wzO" id="jI0-yF-9Gn"/>
+                <outlet property="numberOfCardsLabel" destination="Vz9-VE-ijL" id="U23-sb-8h2"/>
             </connections>
-            <point key="canvasLocation" x="263.768115942029" y="21.09375"/>
+            <point key="canvasLocation" x="263.768115942029" y="57.589285714285708"/>
         </collectionViewCell>
     </objects>
 </document>
