@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  DecksCollectionViewController.swift
 //  Flashcard
 //
 //  Created by Hồng Ngọc Doãn on 5/4/19.
@@ -8,13 +8,9 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class DecksCollectionViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
-
-
 }
-
