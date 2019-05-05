@@ -7,11 +7,10 @@
 //
 
 import Foundation
-import Realm
 import RealmSwift
 
 class Deck: Object {
     @objc dynamic var name: String = ""
     
-    var cardsArray: List<Card> = List<Card>()
+    var cards: List<Card> = List<Card>()
 }

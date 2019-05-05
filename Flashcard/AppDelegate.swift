@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -24,6 +25,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window!.rootViewController = decksNavigationController
         
         window!.makeKeyAndVisible()
+        
+        print(Realm.Configuration.defaultConfiguration.fileURL!)
         
         return true
     }

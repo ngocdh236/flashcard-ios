@@ -22,7 +22,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="9fC-o3-Of5">
-                    <rect key="frame" x="0.0" y="64" width="414" height="798"/>
+                    <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Vte-oJ-ERv">
                         <size key="itemSize" width="50" height="50"/>
@@ -34,10 +34,10 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="9fC-o3-Of5" secondAttribute="trailing" id="3fI-wm-Wtw"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="9fC-o3-Of5" secondAttribute="bottom" id="4Vy-ki-gkV"/>
-                <constraint firstItem="9fC-o3-Of5" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="hhG-FA-Sa1"/>
-                <constraint firstItem="9fC-o3-Of5" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="kcL-hA-fmN"/>
+                <constraint firstItem="9fC-o3-Of5" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="5PP-0p-bTV"/>
+                <constraint firstItem="9fC-o3-Of5" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="dbj-NT-mxt"/>
+                <constraint firstItem="9fC-o3-Of5" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="ebs-PF-QVM"/>
+                <constraint firstAttribute="bottom" secondItem="9fC-o3-Of5" secondAttribute="bottom" id="lK7-HA-1tK"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
         </view>

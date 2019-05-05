@@ -1,5 +1,5 @@
 //
-//  DecksCollectionViewCell.swift
+//  CardsCollectionViewCell.swift
 //  Flashcard
 //
 //  Created by Hồng Ngọc Doãn on 5/4/19.
@@ -8,10 +8,10 @@
 
 import UIKit
 
-class DecksCollectionViewCell: UICollectionViewCell {
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var numberOfCardsLabel: UILabel!
-    
+class CardsCollectionViewCell: UICollectionViewCell {
+
+    @IBOutlet weak var keyLabel: UILabel!
+
     override func awakeFromNib() {
         super.awakeFromNib()
         layer.borderWidth = 0.5
