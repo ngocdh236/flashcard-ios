@@ -1,5 +1,5 @@
 //
-//  DecksCollectionViewController.swift
+//  DecksViewController.swift
 //  Flashcard
 //
 //  Created by Hồng Ngọc Doãn on 5/4/19.

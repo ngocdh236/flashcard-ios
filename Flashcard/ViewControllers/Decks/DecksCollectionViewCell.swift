@@ -1,5 +1,5 @@
 //
-//  DecksCollectionViewself.swift
+//  DecksCollectionViewCell.swift
 //  Flashcard
 //
 //  Created by Hồng Ngọc Doãn on 5/4/19.
@@ -10,6 +10,7 @@ import UIKit
 
 class DecksCollectionViewCell: UICollectionViewCell {
     
+    // MARK: IBOutlets
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var numberOfCardsLabel: UILabel!
     

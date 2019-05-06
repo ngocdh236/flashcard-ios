@@ -12,13 +12,13 @@ import RealmSwift
 class DeckDetailsViewController: UIViewController {
 
     // MARK: IBOutlets
-    @IBOutlet weak var cardsCollectionView: UICollectionView!
+    @IBOutlet weak var collectionView: UICollectionView!
 
     var deck: Deck!
 
     var cards: [Card] = [] {
         didSet {
-            cardsCollectionView.reloadData()
+            collectionView.reloadData()
         }
     }
 
@@ -30,9 +30,9 @@ class DeckDetailsViewController: UIViewController {
 
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButtonPressed))
 
-        cardsCollectionView.registerNib(CardsCollectionViewCell.self)
-        cardsCollectionView.dataSource = self
-        cardsCollectionView.delegate = self
+        collectionView.registerNib(CardsCollectionViewCell.self)
+        collectionView.dataSource = self
+        collectionView.delegate = self
     }
 
     @objc private func addButtonPressed() {
@@ -74,13 +74,17 @@ extension DeckDetailsViewController: UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: CardsCollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
-        cell.keyLabel.text = cards[indexPath.row].key
+        cell.label.text = cards[indexPath.row].key
+        cell.key = cards[indexPath.row].key
+        cell.value = cards[indexPath.row].value
         return cell
     }
 }
 
 extension DeckDetailsViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath) as! CardsCollectionViewCell
+        cell.animation()
     }
 }
 
@@ -90,11 +94,17 @@ extension DeckDetailsViewController: UICollectionViewDelegateFlowLayout {
         layout _: UICollectionViewLayout,
         sizeForItemAt _: IndexPath
     ) -> CGSize {
-        let width = cardsCollectionView.bounds.width / 2 - 10
-        return CGSize(width: width, height: width * 2)
+        let width = collectionView.bounds.width / 2 + 40
+        return CGSize(width: width, height: 400)
     }
 
     func collectionView(_: UICollectionView, layout _: UICollectionViewLayout, minimumLineSpacingForSectionAt _: Int) -> CGFloat {
         return 20.0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 20.0, left: 0.0, bottom: 0.0, right: 0.0)
     }
 }

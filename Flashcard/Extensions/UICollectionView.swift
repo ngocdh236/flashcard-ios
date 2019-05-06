@@ -1,5 +1,5 @@
 //
-//  UICollectionView+Extensions.swift
+//  UICollectionView.swift
 //  Flashcard
 //
 //  Created by Hồng Ngọc Doãn on 5/4/19.
@@ -7,16 +7,6 @@
 //
 
 import UIKit
-
-protocol ReusableView {}
-
-extension UICollectionViewCell: ReusableView {}
-
-extension ReusableView {
-    static var reuseableIdentifier: String {
-        return String(describing: self)
-    }
-}
 
 extension UICollectionView {
     func registerNib<T: UICollectionViewCell>(_ cellType: T.Type, bundle: Bundle? = nil) {

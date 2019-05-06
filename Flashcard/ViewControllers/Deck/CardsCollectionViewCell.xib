@@ -34,7 +34,7 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="275" height="252"/>
             <connections>
-                <outlet property="keyLabel" destination="94b-oC-ykU" id="VlV-Sf-gTT"/>
+                <outlet property="label" destination="94b-oC-ykU" id="VlV-Sf-gTT"/>
             </connections>
             <point key="canvasLocation" x="70" y="98"/>
         </collectionViewCell>
